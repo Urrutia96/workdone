@@ -8,7 +8,7 @@
 				@csrf
 
 				<!-- Password Reset Token -->
-				<input type="hidden" name="token" value="{{ $request->route('token') }}">
+				<input type="hidden" name="token" value="{{ $token }}">
 
 				<div>
 					<label for="email" class="text-lg font-semibold text-gray-700">Email</label>
