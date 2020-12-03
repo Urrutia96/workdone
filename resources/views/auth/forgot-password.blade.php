@@ -3,7 +3,11 @@
     <h1 class="text-6xl text-red-600 font-bold"><span class="text-blue-500">PRO</span>gresso</h1>
     <div class="p-3 mt-4 flex flex-col">
 	   <h3 class="font-bold text-xl">Forgot password?</h3>
-	   <p>Fill the form and we will email you a link that allows you choose a new password</p>
+		 <p>Fill the form and we will email you a link that allows you choose a new password</p>
+		 
+			@if (session('status'))
+				<p class="text-green-500 text-sm font-semibold"> {{ session('status') }}</p>
+			@endif
 
 	   <form action="{{ route('password.email') }}" method="POST">
 		   @csrf

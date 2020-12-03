@@ -4,6 +4,11 @@
     <div class="bg-white p-6 max-w-2xl rounded-lg shadow-xl">
         <h1 class="text-6xl text-red-600 font-bold"><span class="text-blue-500">PRO</span>gresso</h1>
         <div class="p-3 mt-4 flex flex-col items-center">
+
+            @if (session('status'))
+                <p class="text-green-500 text-sm font-semibold"> {{ session('status') }}</p>
+            @endif
+
             <form class="w-full" method="POST" action="{{ route('login') }}">
                 @csrf
                 <div>
