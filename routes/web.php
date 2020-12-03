@@ -5,10 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->middleware(['auth'])->name('home');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware(['guest'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->middleware(['guest']);
