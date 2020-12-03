@@ -8,7 +8,7 @@
     </head>
     <body class="antialiased bg-gradient-to-l from-main to-end">
         <div 
-            class="min-h-screen w-full flex justify-center items-center" 
+            class="min-h-screen h-screen w-full flex justify-center items-center" 
             style="background-image: url({{ $banner ?? null }}); background-repeat: no-repeat;">
         
             {{ $slot }}
